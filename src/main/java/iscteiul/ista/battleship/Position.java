@@ -20,7 +20,7 @@ public class Position implements IPosition {
         this.isOccupied = false;
         this.isHit = false;
     }
-
+    
     /*
      * (non-Javadoc)
      *

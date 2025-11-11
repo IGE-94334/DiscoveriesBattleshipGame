@@ -9,11 +9,11 @@ import java.util.List;
 
 public abstract class Ship implements IShip {
 
-    private static final String GALEAO = "galeao";
-    private static final String FRAGATA = "fragata";
-    private static final String NAU = "nau";
-    private static final String CARAVELA = "caravela";
-    private static final String BARCA = "barca";
+    private static final String GALEAO = "Galeao";
+    private static final String FRAGATA = "Fragata";
+    private static final String NAU = "Nau";
+    private static final String CARAVELA = "Caravela";
+    private static final String BARCA = "Barca";
 
     /**
      * @param shipKind
@@ -126,8 +126,8 @@ public abstract class Ship implements IShip {
     public int getTopMostPos() {
         int top = getPositions().get(0).getRow();
         for (int i = 1; i < getSize(); i++)
-            if (getPositions().get(i).getRow() < top)
-                top = getPositions().get(i).getRow();
+            if (getPositions().get(i).getRow() <= top)
+                top = getPositions().get(i).getRow(); // Dead code presente com apenas < , já que o ponto inicial é sempre um dos pontos mais acima
         return top;
     }
 
@@ -154,8 +154,8 @@ public abstract class Ship implements IShip {
     public int getLeftMostPos() {
         int left = getPositions().get(0).getColumn();
         for (int i = 1; i < getSize(); i++)
-            if (getPositions().get(i).getColumn() < left)
-                left = getPositions().get(i).getColumn();
+            if (getPositions().get(i).getColumn() <= left)
+                left = getPositions().get(i).getColumn(); // Dead code presente com apenas < , já que o ponto inicial é o mais à esquerda se o barco não for um Galeão
         return left;
     }
 
