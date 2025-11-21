@@ -1,17 +1,19 @@
-package iscteiul.ista.raulTesting.battleship;
+package iscteiul.ista.battleship;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test class for class Fleet (implements IFleet).
- * Author: raulf
+ * Author: LEI-111479
  * Date: 2025-11-18 12:45
  * Cyclomatic Complexity:
  * - constructor: 1
@@ -189,5 +191,15 @@ public class FleetTest {
                 () -> assertDoesNotThrow(() -> sut.printShipsByCategory("Barca"))
         );
     }
+
+    @Test
+    @DisplayName("printShipsByCategory lança AssertionError se categoria for null")
+    void testPrintShipsByCategoryNull() {
+        Fleet fleet = new Fleet();
+
+        assertThrows(AssertionError.class, () -> fleet.printShipsByCategory(null),
+                "Deveria lançar AssertionError quando o argumento category é null.");
+    }
+
 
 }

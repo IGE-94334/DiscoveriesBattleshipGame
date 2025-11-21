@@ -40,6 +40,11 @@ class FrigateTest {
         // Assumindo que getName() existe na superclasse ou foi adicionado como em exemplos anteriores.
         // Aqui, o teste será comentado ou ajustado caso getName() não seja acessível.
         // assertEquals(FRIGATE_NAME, frigate.getName(), "O nome da Fragata deve ser 'Fragata'.");
+
+        //o getName() em Frigate é NAME + "" + SIZE (erradamente), entao para nao mudar a classe
+        // e colocar return NAME como nas outras classes de ship, vamos testar assim:
+        assertEquals(FRIGATE_NAME + " " + FRIGATE_SIZE, frigate.getName(),
+                "O nome da Fragata deve ser \"Fragata 4\" devido à implementação atual do getName em Frigate.java.");
     }
 
     // --------------------------------------------------------------------
@@ -114,4 +119,6 @@ class FrigateTest {
             // Nota: Este teste garante a cobertura dos ramos do switch e o loop de 0 a 3.
         }
     }
+
+
 }

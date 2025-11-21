@@ -1,4 +1,4 @@
-package iscteiul.ista.raulTesting.battleship;
+package iscteiul.ista.battleship;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test class for class Game.
- * Author: raulf
+ * Author: LEI-111479
  * Date: 2025-11-18 12:50
  * Cyclomatic Complexity:
  * - constructor: 1
