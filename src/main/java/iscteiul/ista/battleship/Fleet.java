@@ -50,7 +50,7 @@ public class Fleet implements IFleet {
      * se o navio estiver dentro das fronteiras do tabuleiro e se não colidir com outros navios.
      *
      * @param s O navio a adicionar à frota.
-     * @return true se o navio foi adicionado com sucesso, false caso viole alguma regra.
+     * @return true se o navio foi adicionado com sucesso, false caso não cumpra alguma regra.
      */
     @Override
     public boolean addShip(IShip s) {
