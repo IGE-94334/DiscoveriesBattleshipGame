@@ -26,6 +26,10 @@ public class Fleet implements IFleet {
 
     private List<IShip> ships;
 
+    /**
+     * Construtor por omissão da classe Fleet.
+     * Inicializa uma frota vazia, pronta a receber navios.
+     */
     public Fleet() {
         ships = new ArrayList<>();
     }
