@@ -29,3 +29,5 @@ Licenciatura em Informática e Gestão de Empresas
 * Posicionamento da frota: Seguidamente, deverá posicionar os seus navios na sua grelha, seguindo a orientação horizontal ou vertical, sem que o adversário os veja.
 * Restrições no posicionamento da frota: O número de navios é igual para cada jogador e deverão ser posicionados sem que possam tocar-se
 entre si, embora possam estar encostados à borda das grelhas.
+
+## teste merge
