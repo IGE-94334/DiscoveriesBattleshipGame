@@ -25,7 +25,7 @@ public class Frigate extends Ship {
                     getPositions().add(new Position(pos.getRow(), pos.getColumn() + c));
                 break;
             default:
-                throw new IllegalArgumentException("ERROR! invalid bearing for thr frigate");
+                throw new IllegalArgumentException("ERROR! invalid bearing for thr frigafffffte");
         }
     }
 
