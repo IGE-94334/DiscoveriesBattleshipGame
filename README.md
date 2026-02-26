@@ -30,4 +30,33 @@ Licenciatura em Informática e Gestão de Empresas
 * Restrições no posicionamento da frota: O número de navios é igual para cada jogador e deverão ser posicionados sem que possam tocar-se
 entre si, embora possam estar encostados à borda das grelhas.
 
+## 🚢 Descrição Histórica dos Navios
+
+### Galeão (Galleon)
+Grande navio de guerra e comércio utilizado entre os séculos XVI e XVII. Era fortemente armado e utilizado nas rotas oceânicas.
+
+### Nau (Carrack)
+Navio de grande porte usado nas viagens dos Descobrimentos Portugueses. Ideal para transporte de carga em longas distâncias.
+
+### Caravela (Caravel)
+Navio leve e rápido, essencial na exploração da costa africana e do Atlântico.
+
+### Fragata (Frigate)
+Navio de guerra mais ágil, utilizado para escolta e combate naval.
+
+### Barca (Barge)
+Embarcação pequena, utilizada para transporte de curta distância.
+
+---
+
+## 🌍 Referências
+
+- Galeão – https://en.wikipedia.org/wiki/Galleon
+- Nau (Carrack) – https://en.wikipedia.org/wiki/Carrack
+- Caravela – https://en.wikipedia.org/wiki/Caravel
+- Fragata – https://en.wikipedia.org/wiki/Frigate
+- Barca – https://en.wikipedia.org/wiki/Barge
+
+---
+
 ## teste merge
