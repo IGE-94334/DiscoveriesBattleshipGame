@@ -2,10 +2,22 @@
  *
  */
 package iscteiul.ista.battleship;
+/**
+ * Representa uma Caravela no jogo Discoveries Battleship.
+ * A Caravela é um navio de pequena dimensão com tamanho 2.
+ * * @author Alexandre Mira
+ * @version 1.0
+ */
 
 public class Caravel extends Ship {
     private static final Integer SIZE = 2;
+    /**
+     * Dimensão fixa da caravela (número de quadrados que ocupa).
+     */
     private static final String NAME = "Caravela";
+    /**
+     * Nome tradicional da embarcação.
+     */
 
     /**
      * @param bearing the bearing where the Caravel heads to
@@ -38,6 +50,10 @@ public class Caravel extends Ship {
      * (non-Javadoc)
      *
      * @see battleship.Ship#getSize()
+     */
+    /**
+     * Devolve o tamanho da caravela.
+     * * @return O número de células ocupadas pelo navio (sempre 2).
      */
     @Override
     public Integer getSize() {
