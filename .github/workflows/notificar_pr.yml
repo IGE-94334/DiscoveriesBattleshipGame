@@ -1,0 +1,43 @@
+name: Notify PR reviewer
+
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Choose reviewer
+        id: pick
+        run: |
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          # Mapeamento simples: autor -> colega responsável (revisor)
+          # Troca pelos vossos usernames do GitHub
+          if [ "$AUTHOR" = "IGE-12345" ]; then
+            REVIEWER="IGE-67890"
+          elif [ "$AUTHOR" = "IGE-23456" ]; then
+            REVIEWER="IGE-78901"
+          else
+            REVIEWER="IGE-67890"  # fallback
+          fi
+
+          echo "reviewer=$REVIEWER" >> $GITHUB_OUTPUT
+
+      - name: Comment and mention reviewer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const reviewer = "${{ steps.pick.outputs.reviewer }}";
+            const prNumber = context.payload.pull_request.number;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `🔔 @${reviewer} tens um Pull Request para rever.\n\n- PR: #${prNumber}\n- Autor: @${context.payload.pull_request.user.login}\n- Objetivo: revisão do Javadoc / alterações submetidas.\n\n✅ Quando terminares, deixa feedback e faz approve ou requests changes.`
+            });
