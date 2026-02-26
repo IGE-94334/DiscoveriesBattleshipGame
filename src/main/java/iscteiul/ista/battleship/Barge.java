@@ -18,7 +18,7 @@ package iscteiul.ista.battleship;
 public class Barge extends Ship {
 
     /**
-     * The fixed size of a Barge (number of board cells occupied).
+     * The fixed size of a Barge (number of board cells occupied).sjdjjkajdjwkd
      */
     private static final Integer SIZE = 1;
 
