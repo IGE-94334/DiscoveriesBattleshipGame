@@ -6,11 +6,16 @@ package iscteiul.ista.battleship;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Representa a frota de um jogador no jogo Batalha Naval.
+ * A frota é constituída por uma lista de navios que partilham o mesmo tabuleiro.
+ * Implementa a interface IFleet para garantir as operações essenciais de gestão da frota.
+ */
 public class Fleet implements IFleet {
     /**
-     * This operation prints all the given ships
+     * Imprime na consola a informação detalhada de uma lista fornecida de navios.
      *
-     * @param ships The list of ships
+     * @param ships A lista de navios a ser impressa na consola.
      */
     static void printShips(List<IShip> ships) {
         for (IShip ship : ships)
@@ -25,15 +30,23 @@ public class Fleet implements IFleet {
         ships = new ArrayList<>();
     }
 
+    /**
+     * Devolve a lista completa de navios que compõem a frota atual.
+     *
+     * @return Uma lista (List) de objetos do tipo IShip.
+     */
     @Override
     public List<IShip> getShips() {
         return ships;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Adiciona um novo navio à frota, garantindo que as regras do jogo são cumpridas.
+     * O navio só é adicionado se o tamanho máximo da frota não tiver sido excedido,
+     * se o navio estiver dentro das fronteiras do tabuleiro e se não colidir com outros navios.
      *
-     * @see battleship.IFleet#addShip(battleship.IShip)
+     * @param s O navio a adicionar à frota.
+     * @return true se o navio foi adicionado com sucesso, false caso viole alguma regra.
      */
     @Override
     public boolean addShip(IShip s) {
@@ -45,10 +58,12 @@ public class Fleet implements IFleet {
         return result;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Filtra e devolve todos os navios da frota que pertencem a uma categoria específica
+     * (e.g., "Galeao", "Fragata", etc.).
      *
-     * @see battleship.IFleet#getShipsLike(java.lang.String)
+     * @param category A categoria do navio em formato de texto.
+     * @return Uma lista contendo apenas os navios correspondentes à categoria solicitada.
      */
     @Override
     public List<IShip> getShipsLike(String category) {
@@ -60,10 +75,10 @@ public class Fleet implements IFleet {
         return shipsLike;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Devolve uma lista de todos os navios da frota que ainda não foram totalmente afundados.
      *
-     * @see battleship.IFleet#getFloatingShips()
+     * @return Uma lista de navios (IShip) cujo estado indica que ainda flutuam.
      */
     @Override
     public List<IShip> getFloatingShips() {
@@ -75,10 +90,11 @@ public class Fleet implements IFleet {
         return floatingShips;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Verifica e devolve o navio da frota que ocupa uma determinada coordenada (posição) no tabuleiro.
      *
-     * @see battleship.IFleet#shipAt(battleship.IPosition)
+     * @param pos A posição (coordenadas) a inspecionar.
+     * @return O objeto IShip que ocupa a posição indicada, ou null se a posição estiver livre (água).
      */
     @Override
     public IShip shipAt(IPosition pos) {
@@ -103,7 +119,9 @@ public class Fleet implements IFleet {
 
 
     /**
-     * This operation shows the state of a fleet
+     * Imprime na consola um relatório completo com o estado atual da frota.
+     * Inclui a listagem de todos os navios, os navios que ainda flutuam 
+     * e o inventário agrupado por categoria de barco do tempo dos Descobrimentos.
      */
     public void printStatus() {
         printAllShips();
