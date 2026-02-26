@@ -25,7 +25,7 @@ Licenciatura em Informática e Gestão de Empresas
 | Submarino | Barca | Barge | 1 | 4 |
 
 ### Regras
-Preparação das grelhas: Cada jogador começa por construir duas grelhas quadriculadas iguais de 10x10 quadrados. Uma das grelhas representa “o seu mar”, a outra “o mar do adversário”.
-Posicionamento da frota: Seguidamente, deverá posicionar os seus navios na sua grelha, seguindo a orientação horizontal ou vertical, sem que o adversário os veja.
-Restrições no posicionamento da frota: O número de navios é igual para cada jogador e deverão ser posicionados sem que possam tocar-se
+-Preparação das grelhas: Cada jogador começa por construir duas grelhas quadriculadas iguais de 10x10 quadrados. Uma das grelhas representa “o seu mar”, a outra “o mar do adversário”.
+-Posicionamento da frota: Seguidamente, deverá posicionar os seus navios na sua grelha, seguindo a orientação horizontal ou vertical, sem que o adversário os veja.
+-Restrições no posicionamento da frota: O número de navios é igual para cada jogador e deverão ser posicionados sem que possam tocar-se
 entre si, embora possam estar encostados à borda das grelhas.
