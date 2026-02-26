@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Representa a frota de um jogador no jogo Batalha Naval.
- * A frota é constituída por uma lista de navios que partilham o mesmo tabuleiro.
+ * A frota é constituída por uma lista de navios que partilham o mesmo tabuleiro. d d d d djr
  * Implementa a interface IFleet para garantir as operações essenciais de gestão da frota.
  */
 public class Fleet implements IFleet {
