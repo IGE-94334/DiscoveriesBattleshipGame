@@ -12,7 +12,7 @@ package iscteiul.ista.battleship;
 public class Caravel extends Ship {
     private static final Integer SIZE = 2;
     /**
-     * Dimensão fixa da caravela (número de quadrados que ocupa).
+     * Dimensão fixa da caravela (número de quadrados que ocupa). string estática
      */
     private static final String NAME = "Caravela";
     /**

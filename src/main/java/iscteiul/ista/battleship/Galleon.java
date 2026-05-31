@@ -4,7 +4,7 @@ package iscteiul.ista.battleship;
  * Representa um navio do tipo Galeão no jogo Battleship.
  * O Galeão é uma embarcação de tamanho 5 que ocupa uma forma em "T",
  * estendendo-se em diferentes direções com base na sua orientação (bearing).
- * * @author [Teu Nome/Equipa]
+ * * @author IGE106806
  * @version 1.0
  */
 public class Galleon extends Ship {

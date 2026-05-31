@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discoveries Battleship Game - ByteFleet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0b3d91;
+            --secondary-color: #1e4d2b;
+            --background-color: #f0f4f8;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2, h3 {
+            color: var(--primary-color);
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            overflow-x: auto;
+            display: block;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ship-card {
+            background: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .ship-card h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+
+        .ship-card p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Discoveries Battleship Game</h1>
+        <p>Grupo: ByteFleet</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Informações do Grupo</h2>
+            <h3>Curso</h3>
+            <p>Licenciatura em Informática e Gestão de Empresas</p>
+            
+            <h3>Elementos do Grupo</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº Aluno</th>
+                        <th>Nome Completo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>106806</td>
+                        <td>Francisco Santos</td>
+                    </tr>
+                    <tr>
+                        <td>123015</td>
+                        <td>Alexandre Mira</td>
+                    </tr>
+                    <tr>
+                        <td>112949</td>
+                        <td>Pedro Santana</td>
+                    </tr>
+                    <tr>
+                        <td>94334</td>
+                        <td>José Caldeira</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>⛵ Frota</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Navio (Atual)</th>
+                        <th>Navio (Descobrimentos)</th>
+                        <th>Nome (Inglês)</th>
+                        <th>Dimensão</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Porta-aviões</td>
+                        <td>Galeão</td>
+                        <td>Galleon</td>
+                        <td>5</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Navio de 4 canhões</td>
+                        <td>Fragata</td>
+                        <td>Frigate</td>
+                        <td>4</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Navio de 3 canhões</td>
+                        <td>Nau</td>
+                        <td>Carrack</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Navio de 2 canhões</td>
+                        <td>Caravela</td>
+                        <td>Caravel</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Submarino</td>
+                        <td>Barca</td>
+                        <td>Barge</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Regras do Jogo</h2>
+            <ul>
+                <li><strong>Preparação das grelhas:</strong> Cada jogador começa por construir duas grelhas quadriculadas iguais de 10x10 quadrados. Uma das grelhas representa "o seu mar", a outra "o mar do adversário".</li>
+                <li><strong>Posicionamento da frota:</strong> Seguidamente, deverá posicionar os seus navios na sua grelha, seguindo a orientação horizontal ou vertical, sem que o adversário os veja.</li>
+                <li><strong>Restrições no posicionamento da frota:</strong> O número de navios é igual para cada jogador e deverão ser posicionados sem que possam tocar-se entre si, embora possam estar encostados à borda das grelhas.</li>
+                <li><strong>Jogabilidade:</strong> Depois dos navios terem sido posicionados, cada jogador, à vez, "atira três tiros" sobre a frota adversária, referindo as respectivas coordenadas dos tiros (linha, coluna). O adversário deve referir o resultado dessa rajada de três tiros, informando se acertou em um ou mais navios e de que tipo, bem como os tiros na água!</li>
+                <li><strong>Registo:</strong> Cada jogador vai registando na grelha do oponente os resultados dos seus tiros, identificando os navios afundados.</li>
+                <li><strong>Vitória:</strong> Ganha o jogo o primeiro que atingir todos os navios da frota adversária.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🚢 Descrição Histórica dos Navios</h2>
+            
+            <div class="ship-card">
+                <h4>Galeão (Galleon)</h4>
+                <p>Grande navio de guerra e comércio utilizado entre os séculos XVI e XVII. Era fortemente armado e utilizado nas rotas oceânicas.</p>
+            </div>
+            
+            <div class="ship-card">
+                <h4>Nau (Carrack)</h4>
+                <p>Navio de grande porte usado nas viagens dos Descobrimentos Portugueses. Ideal para transporte de carga em longas distâncias.</p>
+            </div>
+            
+            <div class="ship-card">
+                <h4>Caravela (Caravel)</h4>
+                <p>Navio leve e rápido, essencial na exploração da costa africana e do Atlântico.</p>
+            </div>
+            
+            <div class="ship-card">
+                <h4>Fragata (Frigate)</h4>
+                <p>Navio de guerra mais ágil, utilizado para escolta e combate naval.</p>
+            </div>
+            
+            <div class="ship-card">
+                <h4>Barca (Barge)</h4>
+                <p>Embarcação pequena, utilizada para transporte de curta distância.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🌍 Referências</h2>
+            <ul>
+                <li>Galeão – <a href="https://en.wikipedia.org/wiki/Galleon" target="_blank">https://en.wikipedia.org/wiki/Galleon</a></li>
+                <li>Nau (Carrack) – <a href="https://en.wikipedia.org/wiki/Carrack" target="_blank">https://en.wikipedia.org/wiki/Carrack</a></li>
+                <li>Caravela – <a href="https://en.wikipedia.org/wiki/Caravel" target="_blank">https://en.wikipedia.org/wiki/Caravel</a></li>
+                <li>Fragata – <a href="https://en.wikipedia.org/wiki/Frigate" target="_blank">https://en.wikipedia.org/wiki/Frigate</a></li>
+                <li>Barca – <a href="https://en.wikipedia.org/wiki/Barge" target="_blank">https://en.wikipedia.org/wiki/Barge</a></li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
