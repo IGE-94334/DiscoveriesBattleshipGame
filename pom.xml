@@ -28,26 +28,86 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <version>2.25.2</version>
       <scope>compile</scope>
     </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <!-- Jar executável com main class definida -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>iscteiul.ista.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <!-- Testes JUnit (necessário para JUnit 5/6) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.2</version>
+      </plugin>
+
+      <!-- Site Maven → pasta docs/ (GitHub Pages) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+        <configuration>
+          <outputDirectory>${project.basedir}/docs</outputDirectory>
+        </configuration>
+      </plugin>
+
+      <!-- Javadoc → docs/apidocs/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.11.2</version>
+        <configuration>
+          <reportOutputDirectory>${project.basedir}/docs</reportOutputDirectory>
+          <destDir>apidocs</destDir>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
 
   <reporting>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.8.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.11.2</version>
+        <configuration>
+          <reportOutputDirectory>${project.basedir}/docs</reportOutputDirectory>
+          <destDir>apidocs</destDir>
+        </configuration>
       </plugin>
     </plugins>
   </reporting>
+
 </project>

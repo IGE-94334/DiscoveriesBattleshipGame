@@ -28,9 +28,9 @@ jobs:
       - name: Verify dependencies
         run: mvn dependency:resolve
 
-      # 4. Compilar o projeto
+      # 4. Compilar e empacotar o projeto (package gera o jar necessário para o Docker)
       - name: Build project
-        run: mvn clean compile
+        run: mvn clean package -DskipTests
 
       # 5. Executar testes unitários
       - name: Run unit tests
@@ -69,4 +69,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/site
+          publish_dir: ./docs
