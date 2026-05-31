@@ -1,0 +1,43 @@
+{
+  "name": "Discoveries Battleship Game",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "ms-azuretools.vscode-docker",
+        "github.vscode-github-actions",
+        "yzhang.markdown-all-in-one",
+        "eamodio.gitlens",
+        "redhat.java",
+        "vscjava.vscode-java-test"
+      ],
+      "settings": {
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-17",
+            "default": true
+          }
+        ],
+        "java.compile.nullAnalysis.mode": "automatic",
+        "maven.executable.path": "/usr/bin/mvn"
+      }
+    },
+    "jetbrains": {
+      "plugins": [
+        "Docker",
+        "org.jetbrains.plugins.github",
+        "net.alexanderdev.idea-markdown-navigator"
+      ]
+    }
+  },
+  "postCreateCommand": "mvn dependency:resolve -q",
+  "remoteUser": "root",
+  "features": {}
+}
